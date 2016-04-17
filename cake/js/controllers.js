@@ -1,10 +1,10 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope,Chats) {
-     $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+.controller('DashCtrl', function($scope,Cakes) {
+    $scope.cakes = Cakes.all();
+    $scope.remove = function(cake) {
+      Cakes.remove(cake);
+    };
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {

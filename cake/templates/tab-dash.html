@@ -1,12 +1,9 @@
 <ion-view >
-  
-  <ion-content >
-           <ion-header-bar align-title="center" class="bar-calm">   
+        <ion-header-bar align-title="center" class="bar-calm">   
             <button class="button">合肥</button>
          <h1 class="title">蛋糕精灵</h1>     
           <button class="button">天气</button>
-       </ion-header-bar>
-      
+       </ion-header-bar>   
       <ion-tabs class="tabs-top  tabs-balanced">
 
             <ion-tab title="首页"  >
@@ -26,9 +23,20 @@
               <!-- 标签 3 内容 -->
             </ion-tab>
         </ion-tabs>
-
     
+  <ion-content class="has-subheader">
+       
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="cake in cakes" type="item-text-wrap" href="#">
+          <img ng-src="{{cake.face}}">
+          <h2>{{caket.name}}</h2>
+          <p>{{cake.lastText}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
 
+          <ion-option-button class="button-assertive" ng-click="remove(cake)">
+            Delete
+          </ion-option-button>
+        </ion-item>
+    </ion-list>
   </ion-content>
-    
 </ion-view>
